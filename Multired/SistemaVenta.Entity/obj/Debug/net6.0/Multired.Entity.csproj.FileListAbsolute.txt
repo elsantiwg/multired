@@ -1,0 +1,14 @@
+C:\Users\ldsin\Downloads\082_AvanceSistemaVenta-master\082_AvanceSistemaVenta-master\SistemaVenta.Entity\bin\Debug\net6.0\Multired.Entity.deps.json
+C:\Users\ldsin\Downloads\082_AvanceSistemaVenta-master\082_AvanceSistemaVenta-master\SistemaVenta.Entity\bin\Debug\net6.0\Multired.Entity.runtimeconfig.json
+C:\Users\ldsin\Downloads\082_AvanceSistemaVenta-master\082_AvanceSistemaVenta-master\SistemaVenta.Entity\bin\Debug\net6.0\Multired.Entity.dll
+C:\Users\ldsin\Downloads\082_AvanceSistemaVenta-master\082_AvanceSistemaVenta-master\SistemaVenta.Entity\bin\Debug\net6.0\Multired.Entity.pdb
+C:\Users\ldsin\Downloads\082_AvanceSistemaVenta-master\082_AvanceSistemaVenta-master\SistemaVenta.Entity\obj\Debug\net6.0\Multired.Entity.csproj.AssemblyReference.cache
+C:\Users\ldsin\Downloads\082_AvanceSistemaVenta-master\082_AvanceSistemaVenta-master\SistemaVenta.Entity\obj\Debug\net6.0\Multired.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ldsin\Downloads\082_AvanceSistemaVenta-master\082_AvanceSistemaVenta-master\SistemaVenta.Entity\obj\Debug\net6.0\Multired.Entity.AssemblyInfoInputs.cache
+C:\Users\ldsin\Downloads\082_AvanceSistemaVenta-master\082_AvanceSistemaVenta-master\SistemaVenta.Entity\obj\Debug\net6.0\Multired.Entity.AssemblyInfo.cs
+C:\Users\ldsin\Downloads\082_AvanceSistemaVenta-master\082_AvanceSistemaVenta-master\SistemaVenta.Entity\obj\Debug\net6.0\Multired.Entity.csproj.CoreCompileInputs.cache
+C:\Users\ldsin\Downloads\082_AvanceSistemaVenta-master\082_AvanceSistemaVenta-master\SistemaVenta.Entity\obj\Debug\net6.0\Multired.Entity.dll
+C:\Users\ldsin\Downloads\082_AvanceSistemaVenta-master\082_AvanceSistemaVenta-master\SistemaVenta.Entity\obj\Debug\net6.0\refint\Multired.Entity.dll
+C:\Users\ldsin\Downloads\082_AvanceSistemaVenta-master\082_AvanceSistemaVenta-master\SistemaVenta.Entity\obj\Debug\net6.0\Multired.Entity.pdb
+C:\Users\ldsin\Downloads\082_AvanceSistemaVenta-master\082_AvanceSistemaVenta-master\SistemaVenta.Entity\obj\Debug\net6.0\Multired.Entity.genruntimeconfig.cache
+C:\Users\ldsin\Downloads\082_AvanceSistemaVenta-master\082_AvanceSistemaVenta-master\SistemaVenta.Entity\obj\Debug\net6.0\ref\Multired.Entity.dll
