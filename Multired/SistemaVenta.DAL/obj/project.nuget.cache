@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uj3Fs5MJzSlRjcLExp37S3Xpz5LZ2Gf7vIsfR5fLgeiFu//cG1RiPkqTIxs4Fo2XNHDigCINwZRTRLyud68Blg==",
+  "dgSpecHash": "xfAnWXOUR5jqfcbebiWkV2oFX/WfwBhyDA2TyOyp6cOtHzSi60s5fSoA0fdgO3r4ZG4gCgpV3Z99JYalctKrnA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ldsin\\Downloads\\multired\\Multired\\SistemaVenta.DAL\\Multired.DAL.csproj",
+  "projectFilePath": "C:\\Users\\ldsin\\OneDrive\\Escritorio\\drive\\github\\multired\\Multired\\SistemaVenta.DAL\\Multired.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ldsin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\ldsin\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ldsin\\Downloads\\multired\\Multired\\SistemaVenta.DAL\\Multired.DAL.csproj": {}
+    "C:\\Users\\ldsin\\OneDrive\\Escritorio\\drive\\github\\multired\\Multired\\SistemaVenta.DAL\\Multired.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ldsin\\Downloads\\multired\\Multired\\SistemaVenta.DAL\\Multired.DAL.csproj": {
+    "C:\\Users\\ldsin\\OneDrive\\Escritorio\\drive\\github\\multired\\Multired\\SistemaVenta.DAL\\Multired.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ldsin\\Downloads\\multired\\Multired\\SistemaVenta.DAL\\Multired.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\ldsin\\OneDrive\\Escritorio\\drive\\github\\multired\\Multired\\SistemaVenta.DAL\\Multired.DAL.csproj",
         "projectName": "Multired.DAL",
-        "projectPath": "C:\\Users\\ldsin\\Downloads\\multired\\Multired\\SistemaVenta.DAL\\Multired.DAL.csproj",
+        "projectPath": "C:\\Users\\ldsin\\OneDrive\\Escritorio\\drive\\github\\multired\\Multired\\SistemaVenta.DAL\\Multired.DAL.csproj",
         "packagesPath": "C:\\Users\\ldsin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ldsin\\Downloads\\multired\\Multired\\SistemaVenta.DAL\\obj\\",
+        "outputPath": "C:\\Users\\ldsin\\OneDrive\\Escritorio\\drive\\github\\multired\\Multired\\SistemaVenta.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ldsin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ldsin\\Downloads\\multired\\Multired\\SistemaVenta.Entity\\Multired.Entity.csproj": {
-                "projectPath": "C:\\Users\\ldsin\\Downloads\\multired\\Multired\\SistemaVenta.Entity\\Multired.Entity.csproj"
+              "C:\\Users\\ldsin\\OneDrive\\Escritorio\\drive\\github\\multired\\Multired\\SistemaVenta.Entity\\Multired.Entity.csproj": {
+                "projectPath": "C:\\Users\\ldsin\\OneDrive\\Escritorio\\drive\\github\\multired\\Multired\\SistemaVenta.Entity\\Multired.Entity.csproj"
               }
             }
           }
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\Users\\ldsin\\Downloads\\multired\\Multired\\SistemaVenta.Entity\\Multired.Entity.csproj": {
+    "C:\\Users\\ldsin\\OneDrive\\Escritorio\\drive\\github\\multired\\Multired\\SistemaVenta.Entity\\Multired.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ldsin\\Downloads\\multired\\Multired\\SistemaVenta.Entity\\Multired.Entity.csproj",
+        "projectUniqueName": "C:\\Users\\ldsin\\OneDrive\\Escritorio\\drive\\github\\multired\\Multired\\SistemaVenta.Entity\\Multired.Entity.csproj",
         "projectName": "Multired.Entity",
-        "projectPath": "C:\\Users\\ldsin\\Downloads\\multired\\Multired\\SistemaVenta.Entity\\Multired.Entity.csproj",
+        "projectPath": "C:\\Users\\ldsin\\OneDrive\\Escritorio\\drive\\github\\multired\\Multired\\SistemaVenta.Entity\\Multired.Entity.csproj",
         "packagesPath": "C:\\Users\\ldsin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ldsin\\Downloads\\multired\\Multired\\SistemaVenta.Entity\\obj\\",
+        "outputPath": "C:\\Users\\ldsin\\OneDrive\\Escritorio\\drive\\github\\multired\\Multired\\SistemaVenta.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ldsin\\AppData\\Roaming\\NuGet\\NuGet.Config",

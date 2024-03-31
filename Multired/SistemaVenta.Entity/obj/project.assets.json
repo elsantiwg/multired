@@ -2017,11 +2017,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ldsin\\Downloads\\multired\\Multired\\SistemaVenta.Entity\\Multired.Entity.csproj",
+      "projectUniqueName": "C:\\Users\\ldsin\\OneDrive\\Escritorio\\drive\\github\\multired\\Multired\\SistemaVenta.Entity\\Multired.Entity.csproj",
       "projectName": "Multired.Entity",
-      "projectPath": "C:\\Users\\ldsin\\Downloads\\multired\\Multired\\SistemaVenta.Entity\\Multired.Entity.csproj",
+      "projectPath": "C:\\Users\\ldsin\\OneDrive\\Escritorio\\drive\\github\\multired\\Multired\\SistemaVenta.Entity\\Multired.Entity.csproj",
       "packagesPath": "C:\\Users\\ldsin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ldsin\\Downloads\\multired\\Multired\\SistemaVenta.Entity\\obj\\",
+      "outputPath": "C:\\Users\\ldsin\\OneDrive\\Escritorio\\drive\\github\\multired\\Multired\\SistemaVenta.Entity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ldsin\\AppData\\Roaming\\NuGet\\NuGet.Config",

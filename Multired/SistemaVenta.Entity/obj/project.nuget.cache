@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iffm/aVCNwhudWru2B7puSdZJ65fA02gjlZQteir7kam9YplvufedQ6x6lD70A2kOII3Pmqxaf5GUP1hTZpITw==",
+  "dgSpecHash": "tQKYY81gghi0kM24r83UWczWTjrfR93q8bEOgy9B+uKvzJtbupAgMGmQuZf8Spf8OHPbZqnt3WiCUF+8v/efHg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ldsin\\Downloads\\multired\\Multired\\SistemaVenta.Entity\\Multired.Entity.csproj",
+  "projectFilePath": "C:\\Users\\ldsin\\OneDrive\\Escritorio\\drive\\github\\multired\\Multired\\SistemaVenta.Entity\\Multired.Entity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ldsin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ldsin\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
