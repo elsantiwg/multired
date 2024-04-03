@@ -18,7 +18,7 @@
         <link href="~/css/sb-admin-2.css" rel="stylesheet">
         <link href="~/vendor/toastr/toastr.min.css" rel="stylesheet">
         <link href="~/vendor/sweetalert/sweetalert.css" rel="stylesheet">
-        @await RenderSectionAsync("Scripts", required: false)
+        @await RenderSectionAsync("Estilos", required: false)
     </head>
 <body id="page-top">
 
@@ -55,7 +55,7 @@
                 </a>
                 <div id="collapseAdministracion" class="collapse" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="usuarios.html">Usuarios</a>
+                        <a class="collapse-item" href="@Url.Action("Index","Usuario")">Usuarios</a>
                         <a class="collapse-item" href="negocio.html">Negocio</a>
                     </div>
                 </div>
@@ -191,7 +191,7 @@
     <script src="~/vendor/toastr/toastr.min.js"></script>
     <script src="~/vendor/sweetalert/sweetalert.js"></script>
     <script src="~/vendor/loadingoverlay/loadingoverlay.min.js"></script>
-    @await RenderSectionAsync("Scripts", required: true)
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
 
