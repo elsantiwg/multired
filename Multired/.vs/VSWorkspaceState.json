@@ -3,6 +3,7 @@
     "",
     "\\SistemaVenta.AplicacionWeb",
     "\\SistemaVenta.AplicacionWeb\\Views",
+    "\\SistemaVenta.AplicacionWeb\\Views\\DashBoard",
     "\\SistemaVenta.AplicacionWeb\\Views\\Shared"
   ],
   "SelectedNode": "\\SistemaVenta.AplicacionWeb\\Views\\Shared\\_Layout.cshtml",
