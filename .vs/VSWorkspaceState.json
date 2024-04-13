@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\SistemaVenta.AplicacionWeb",
+    "\\SistemaVenta.DAL",
+    "\\SistemaVenta.DAL\\DBContext",
+    "\\SistemaVenta.DAL\\Implementacion",
+    "\\SistemaVenta.DAL\\Interfaces",
+    "\\SistemaVenta.DAL\\obj",
+    "\\SistemaVenta.IOC"
+  ],
+  "SelectedNode": "\\SistemaVenta.DAL\\Implementacion\\VentaRepository.cs",
+  "PreviewInSolutionExplorer": false
+}
