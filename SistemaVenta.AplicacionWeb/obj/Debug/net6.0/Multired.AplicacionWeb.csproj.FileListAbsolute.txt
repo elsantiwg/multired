@@ -832,3 +832,5 @@ C:\Users\ldsin\OneDrive\Escritorio\drive\github\Multired\SistemaVenta.Aplicacion
 C:\Users\ldsin\OneDrive\Escritorio\drive\github\Multired\SistemaVenta.AplicacionWeb\obj\Debug\net6.0\Multired.AplicacionWeb.pdb
 C:\Users\ldsin\OneDrive\Escritorio\drive\github\Multired\SistemaVenta.AplicacionWeb\obj\Debug\net6.0\Multired.AplicacionWeb.genruntimeconfig.cache
 C:\Users\ldsin\OneDrive\Escritorio\drive\github\Multired\SistemaVenta.AplicacionWeb\obj\Debug\net6.0\ref\Multired.AplicacionWeb.dll
+C:\Users\ldsin\OneDrive\Escritorio\drive\github\Multired\SistemaVenta.AplicacionWeb\bin\Debug\net6.0\Firebase.Auth.dll
+C:\Users\ldsin\OneDrive\Escritorio\drive\github\Multired\SistemaVenta.AplicacionWeb\bin\Debug\net6.0\Firebase.Storage.dll

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "FQ0rXlGkMJoBB2DHijrfL/VZtEQL7MBc+5yM4vNEjg7hPlbRpNE/FO47S50DEAjdhOLyUsOBPrrqfrNo86uzog==",
+  "dgSpecHash": "VvL3bIWk/Dr9Vri3UIw+LfyBvC07E3V4/a2zVJwD/zZZZORGZh3mSVCS0l8eTpVm8l3q0GZgi6MeHXO3VGDCKA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ldsin\\OneDrive\\Escritorio\\drive\\github\\Multired\\SistemaVenta.AplicacionWeb\\Multired.AplicacionWeb.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ldsin\\.nuget\\packages\\firebaseauthentication.net\\3.7.2\\firebaseauthentication.net.3.7.2.nupkg.sha512",
+    "C:\\Users\\ldsin\\.nuget\\packages\\firebasestorage.net\\1.0.3\\firebasestorage.net.1.0.3.nupkg.sha512",
     "C:\\Users\\ldsin\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\ldsin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\ldsin\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",
