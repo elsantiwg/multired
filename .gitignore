@@ -50,3 +50,46 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Archivos y directorios generados por el sistema
+.DS_Store
+Thumbs.db
+
+# Archivos y directorios generados por Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos de compilación
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.suo
+*.bak
+*.ncb
+*.ilk
+*.log
+*.lib
+*.sbr
+*.exp
+*.idb
+*.ipch
+
+
+# Otros archivos y directorios
+*.log
+*.sql
+*.sqlite
+
+# Archivos de configuración del entorno
+*.env
+*.json
+
+# Archivos de configuración de IDE
+.idea/
+.vs/
+.vscode/
