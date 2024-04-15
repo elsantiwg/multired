@@ -8,7 +8,7 @@ namespace Multired.AplicacionWeb.Controllers
         {
             return View();
         }
-        public IActionResult Historialenta()
+        public IActionResult HistorialVenta()
         {
             return View();
         }
