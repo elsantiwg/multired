@@ -26,7 +26,6 @@ namespace SistemaVenta.IOC
             });
 
             services.AddTransient(typeof(IGerenericRepository<>), typeof(GenericRepository<>));
-
             services.AddScoped<IVentaRepository, VentaRepository>();
 
             services.AddScoped<ICorreoService, CorreoService>();
@@ -34,7 +33,9 @@ namespace SistemaVenta.IOC
 
             services.AddScoped<IUtilidadesService, UtilidadesService>();
             services.AddScoped<IRolService, RolService>();
+
             services.AddScoped<IUsuarioService, Usuarioservice>();
+            services.AddScoped<INegocioService, NegocioService>();
 
         }
     }
