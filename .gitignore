@@ -89,6 +89,8 @@ obj/
 #*.env
 #*.json
 
+
+
 # Archivos de configuración de IDE
 .idea/
 .vs/
