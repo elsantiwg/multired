@@ -86,7 +86,7 @@ $(document).ready(function () {
 })
 
 function mostrarModal(modelo = MODELO_BASE) {
-    $("#txtId").val(modelo.idUsuario))
+    $("#txtId").val(modelo.idUsuario)
     $("#txtNombre").val(modelo.nombre)
     $("#txtCorreo").val(modelo.correo)
     $("#txtTelefono").val(modelo.telefono)
@@ -105,7 +105,7 @@ $("#btnNuevo").click(function () {
 $("#btnGuardar").click(function () {
 
     const inputs = $("input.input-validar").serializeArray();
-    const inputs_sin_valor = inputs.filler((item) => item.value.trim() == "")
+    const inputs_sin_valor = inputs.filter((item) => item.value.trim() == "")
 
     if (inputs_sin_valor.length > 0) {
         const mensaje = `Debe completar el campo :${inputs_sin_valor[0].name}`;
@@ -163,7 +163,7 @@ $("#btnGuardar").click(function () {
             .then(responseJson => {
                 if (responseJson.estado) {
 
-                    tablaData.row.(filaSeleccionada).data(responseJson.objeto).draw(false);
+                    tablaData.row.filaSeleccionada.data(responseJson.objeto).draw(false);
                     filaSeleccionada = null;
                     $("#modalData").modal("hide")
                     swal("Listo!", "El usuario fue modificado ", "success")
@@ -199,7 +199,7 @@ $("#tbdata tbody").on("click", ".btn-eliminar", function () {
     const data = tablaData.row(filaSeleccionada).data();
 
     swal({
-        tittle: "¿está seguro?",
+        title: "¿está seguro?",
         text: `Eliminar al usuario "${data.nombre}"`,
         type: "warning",
         showCancelButton: true,
