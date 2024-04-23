@@ -79,7 +79,7 @@ obj/
 *.idb
 *.ipch
 
-
+/*
 # Otros archivos y directorios
 *.log
 *.sql
@@ -88,6 +88,7 @@ obj/
 # Archivos de configuración del entorno
 *.env
 *.json
+*/
 
 # Archivos de configuración de IDE
 .idea/
