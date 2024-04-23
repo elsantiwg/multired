@@ -90,6 +90,7 @@ obj/
 #*.json
 
 
+
 # Archivos de configuración de IDE
 .idea/
 .vs/
