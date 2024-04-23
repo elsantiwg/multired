@@ -81,13 +81,13 @@ obj/
 
 
 # Otros archivos y directorios
-*.log
-*.sql
-*.sqlite
+#*.log
+#*.sql
+#*.sqlite
 
 # Archivos de configuración del entorno
-*.env
-*.json
+#*.env
+#*.json
 
 # Archivos de configuración de IDE
 .idea/
