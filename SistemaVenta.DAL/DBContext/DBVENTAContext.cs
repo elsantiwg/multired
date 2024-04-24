@@ -279,7 +279,7 @@ namespace SistemaVenta.DAL.DBContext
                 entity.Property(e => e.NombreImagen)
                     .HasMaxLength(100)
                     .IsUnicode(false)
-                    .HasColumnName("nombreImagen");
+                    .HasColumnName("NombreImagen");
 
                 entity.Property(e => e.Precio)
                     .HasColumnType("decimal(10, 2)")
