@@ -1,3 +1,4 @@
+
 ﻿const MODELO_BASE = {
 
     idProducto: 0,
@@ -243,3 +244,4 @@ $("#tbdata tbody").on("click", ".btn-eliminar", function () {
         }
     )
 })
+
