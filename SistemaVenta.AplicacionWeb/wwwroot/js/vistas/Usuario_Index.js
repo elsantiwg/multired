@@ -21,6 +21,7 @@ $(document).ready(function () {
             return response.ok ? response.json() : Promise.reject(response);
         })
         .then(responseJson => {
+            console.log(responseJson)
             if (responseJson.length > 0) {
                 responseJson.forEach((item) => {
                     $("#cboRol").append(
@@ -90,7 +91,7 @@ function mostrarModal(modelo = MODELO_BASE) {
     $("#txtNombre").val(modelo.nombre)
     $("#txtCorreo").val(modelo.correo)
     $("#txtTelefono").val(modelo.telefono)
-    $("#cboRol").val(modelo.idRol == 0 ? $("cboRol option:first").val() : modelo.idRol)
+    $("#cboRol").val(modelo.idRol == 0 ? $("#cboRol option:first").val() : modelo.idRol)
     $("#cboEstado").val(modelo.esActivo)
     $("#txtFoto").val("")
     $("#imgUsuario").attr("src", modelo.urlFoto)
@@ -163,7 +164,7 @@ $("#btnGuardar").click(function () {
             .then(responseJson => {
                 if (responseJson.estado) {
 
-                    tablaData.row.filaSeleccionada.data(responseJson.objeto).draw(false);
+                    tablaData.row(filaSeleccionada).data(responseJson.objeto).draw(false);
                     filaSeleccionada = null;
                     $("#modalData").modal("hide")
                     swal("Listo!", "El usuario fue modificado ", "success")
@@ -196,7 +197,7 @@ $("#tbdata tbody").on("click", ".btn-eliminar", function () {
         fila = $(this).closest("tr");
     }
 
-    const data = tablaData.row(filaSeleccionada).data();
+    const data = tablaData.row(fila).data();
 
     swal({
         title: "¿está seguro?",
@@ -208,7 +209,7 @@ $("#tbdata tbody").on("click", ".btn-eliminar", function () {
         cancelButtonText: "no, cancelar",
         closeOnConfirm: false,
         closeOnCancel: true
-    },
+        },
         function (respuesta) {
             if (respuesta) {
                 $(".showSweetAlert").LoadingOverlay("show");

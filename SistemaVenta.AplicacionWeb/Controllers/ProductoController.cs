@@ -50,18 +50,22 @@ namespace Multired.AplicacionWeb.Controllers
             {
                 VMProducto vmProducto = JsonConvert.DeserializeObject<VMProducto>(modelo);
 
-                string nombreImagen = "";
+
+                string NombreImagen = "";
+
                 Stream imagenStream = null;
 
                 if (imagen != null)
                 {
                     string nombre_en_codigo = Guid.NewGuid().ToString("N");
                     string extension = Path.GetExtension(imagen.FileName);
-                    nombreImagen = string.Concat(nombre_en_codigo, extension);
+
+                    NombreImagen = string.Concat(nombre_en_codigo, extension);
                     imagenStream = imagen.OpenReadStream();
                 }
 
-                Producto producto_creado = await _productoServicio.Crear(_mapper.Map<Producto>(vmProducto), imagenStream, nombreImagen);
+                Producto producto_creado = await _productoServicio.Crear(_mapper.Map<Producto>(vmProducto), imagenStream, NombreImagen);
+
 
                 vmProducto = _mapper.Map<VMProducto>(producto_creado);
 
@@ -87,14 +91,21 @@ namespace Multired.AplicacionWeb.Controllers
             {
                 VMProducto vmProducto = JsonConvert.DeserializeObject<VMProducto>(modelo);
 
+                string NombreImagen = "";
+
                 Stream imagenStream = null;
 
                 if (imagen != null)
                 {
+
+                    string nombre_en_codigo = Guid.NewGuid().ToString("N");
+                    string extension = Path.GetExtension(imagen.FileName);
+                    NombreImagen = string.Concat(nombre_en_codigo, extension);
                     imagenStream = imagen.OpenReadStream();
                 }
 
-                Producto producto_editado = await _productoServicio.Editar(_mapper.Map<Producto>(vmProducto), imagenStream);
+                Producto producto_editado = await _productoServicio.Editar(_mapper.Map<Producto>(vmProducto), imagenStream, NombreImagen);
+
 
                 vmProducto = _mapper.Map<VMProducto>(producto_editado);
 

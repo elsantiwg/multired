@@ -63,7 +63,9 @@ namespace Multired.BLL.Implementacion
             }
         }
 
-        public async Task<Producto> Editar(Producto entidad, Stream imagen = null)
+
+        public async Task<Producto> Editar(Producto entidad, Stream imagen = null, string NombreImagen = "")
+
         {
             Producto producto_existe = await _repositorio.Obtener(p => p.CodigoBarra == entidad.CodigoBarra && p.IdProducto != entidad.IdProducto);
             if (producto_existe != null)
@@ -82,6 +84,11 @@ namespace Multired.BLL.Implementacion
                 producto_para_editar.Stock = entidad.Stock;
                 producto_para_editar.Precio = entidad.Precio;
                 producto_para_editar.EsActivo = entidad.EsActivo;
+
+                if (producto_para_editar.NombreImagen == "") {
+                    producto_para_editar.NombreImagen = NombreImagen;
+                }
+
 
                 if (imagen != null)
                 {
