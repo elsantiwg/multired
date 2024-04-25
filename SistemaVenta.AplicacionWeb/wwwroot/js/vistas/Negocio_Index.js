@@ -2,7 +2,6 @@
     $(".card-body").LoadingOverlay("show");
     fetch("/Negocio/Obtener")
         .then(response => {
-            //sa
             $(".card-body").LoadingOverlay("hide");
             return response.ok ? response.json() : Promise.reject(response);
         })
