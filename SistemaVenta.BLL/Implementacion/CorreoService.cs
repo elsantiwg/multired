@@ -15,10 +15,10 @@ namespace Multired.BLL.Implementacion
 {
     public class CorreoService : ICorreoService
     {
-        private readonly IGerenericRepository<Configuracion> _repositorio;
+        private readonly IGenericRepository<Configuracion> _repositorio;
 
         //constructor
-        public CorreoService(IGerenericRepository<Configuracion> repositorio)
+        public CorreoService(IGenericRepository<Configuracion> repositorio)
         {
             _repositorio = repositorio;
         }

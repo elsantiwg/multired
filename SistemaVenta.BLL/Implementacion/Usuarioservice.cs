@@ -16,12 +16,12 @@ namespace Multired.BLL.Implementacion
     public class Usuarioservice : IUsuarioService
     {
 
-        private readonly IGerenericRepository<Usuario> _repositorio;
+        private readonly IGenericRepository<Usuario> _repositorio;
         private readonly IFireBaseService _firebaseService;
         private readonly IUtilidadesService _utilidadesService;
         private readonly ICorreoService _correoService;
 
-        public Usuarioservice(IGerenericRepository<Usuario> repositorio, IFireBaseService firebaseService, IUtilidadesService utilidadesService, ICorreoService correoService)
+        public Usuarioservice(IGenericRepository<Usuario> repositorio, IFireBaseService firebaseService, IUtilidadesService utilidadesService, ICorreoService correoService)
         {
             _repositorio = repositorio;
             _firebaseService = firebaseService;
@@ -156,7 +156,7 @@ namespace Multired.BLL.Implementacion
                     throw new TaskCanceledException("El usuario no existe");
                 }
                 string nombreFoto = usuario_encontrado.NombreFoto;
-                bool respuesta = await _repositorio.eliminar(usuario_encontrado);
+                bool respuesta = await _repositorio.Eliminar(usuario_encontrado);
 
                 if (respuesta)
                 {

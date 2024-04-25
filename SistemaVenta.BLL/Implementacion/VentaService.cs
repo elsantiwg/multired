@@ -14,10 +14,10 @@ namespace Multired.BLL.Implementacion
     public class VentaService : IVentaService
     {
 
-        private readonly IGerenericRepository<Producto> _repositorioProducto;
+        private readonly IGenericRepository<Producto> _repositorioProducto;
         private readonly IVentaRepository _repositorioVenta;
 
-        public VentaService(IGerenericRepository<Producto> repositorioProducto, IVentaRepository repositorioVenta)
+        public VentaService(IGenericRepository<Producto> repositorioProducto, IVentaRepository repositorioVenta)
         {
             _repositorioProducto = repositorioProducto;
             _repositorioVenta = repositorioVenta;

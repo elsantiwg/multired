@@ -30,7 +30,7 @@ $(document).ready(function () {
             },
             {
                 "defaultContent": '<button class="btn btn-primary btn-editar btn-sm mr-2"><i class="fas fa-pencil-alt"></i></button>' +
-                    '<button class="btn btn-danger btn-eliminar btn-sm"><i class="fas fa-trash-alt"></i></button>',
+                    '<button class="btn btn-danger btn-Eliminar btn-sm"><i class="fas fa-trash-alt"></i></button>',
                 "orderable": false,
                 "searchable": false,
                 "width": "80px"
@@ -143,7 +143,7 @@ $("#tbdata tbody").on("click", ".btn-editar", function () {
     mostrarModal(data);
 })
 
-$("#tbdata tbody").on("click", ".btn-eliminar", function () {
+$("#tbdata tbody").on("click", ".btn-Eliminar", function () {
 
     let fila;
     if ($(this).closest("tr").hasClass("child")) {
@@ -160,7 +160,7 @@ $("#tbdata tbody").on("click", ".btn-eliminar", function () {
         type: "warning",
         showCancelButton: true,
         confirmButtonClass: "btn-danger",
-        confirmButtonText: "si, eliminar",
+        confirmButtonText: "si, Eliminar",
         cancelButtonText: "no, cancelar",
         closeOnConfirm: false,
         closeOnCancel: true

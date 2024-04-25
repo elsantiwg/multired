@@ -14,11 +14,11 @@ namespace Multired.BLL.Implementacion
 {
     public class ProductoService : IProductoService
     {
-        private readonly IGerenericRepository<Producto> _repositorio;
+        private readonly IGenericRepository<Producto> _repositorio;
         private readonly IFireBaseService _firebaseServicio;
         private readonly IUtilidadesService _utilidadesServicio;
 
-        public ProductoService(IGerenericRepository<Producto> repositorio, IFireBaseService firebaseServicio)
+        public ProductoService(IGenericRepository<Producto> repositorio, IFireBaseService firebaseServicio)
         {
             _repositorio = repositorio;
             _firebaseServicio = firebaseServicio;
@@ -120,7 +120,7 @@ namespace Multired.BLL.Implementacion
 
                 string nombreImagen = producto_encontrado.NombreImagen;
 
-                bool respuesta = await _repositorio.eliminar(producto_encontrado);
+                bool respuesta = await _repositorio.Eliminar(producto_encontrado);
 
                 if (respuesta)
                     await _firebaseServicio.EliminarStorage("carpeta_producto", nombreImagen);

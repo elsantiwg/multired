@@ -171,7 +171,7 @@ function mostrarProductos_Precios() {
         $("#tbProducto tbody").append(
         $("<tr>").append(
             $("<td>").append(
-                $("<button>").addClass("btn btn-danger btn-eliminar btn-sm").append(
+                $("<button>").addClass("btn btn-danger btn-Eliminar btn-sm").append(
                     $("<i>").addClass("fas fa-trash-alt")
                 ).data("idProducto", item.idProducto)
             ),
@@ -191,7 +191,7 @@ function mostrarProductos_Precios() {
     $("#Total").val(total.toFixed(2))
 }
 
-$(document).on("click", "button.btn-eliminar", function () {
+$(document).on("click", "button.btn-Eliminar", function () {
 
     const _idProducto = $(this).data("idProducto")
 
