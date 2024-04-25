@@ -21,7 +21,7 @@ $(document).ready(function () {
     VISTA_BUSQUEDA["busquedaFecha"]()
 
     $.datepicker.setDefault($.datepicker.regional["es"])
-    $("#txtFechaInicio").datepicker({dateFormat : "dd/mm/yy"})
+    $("#txtFechaInicio").datepicker({ dateFormat: "dd/mm/yy" })
     $("#txtFechaFin").datepicker({ dateFormat: "dd/mm/yy" })
 
 })
@@ -42,7 +42,7 @@ $("#btnBuscar").click(function () {
             return;
         }
     } else {
-        if ($("#txtNumeroVenta").val().trim() == "" ) {
+        if ($("#txtNumeroVenta").val().trim() == "") {
 
             toastr.warning("", "Debe ingresar el numero de venta")
             return;
@@ -112,6 +112,9 @@ $("#tbventa tbody").on("click", ".btn-info", function () {
         )
     })
 
+    $("#linkImprimir").attr("href", `/Venta/MostrarPDFVenta?numeroVenta=${d.numeroVenta}`)
+
+
     $("#modalData").modal("show")
- 
+
 })
