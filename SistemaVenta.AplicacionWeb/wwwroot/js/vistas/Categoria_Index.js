@@ -119,6 +119,7 @@ $("#btnGuardar").click(function () {
             .then(responseJson => {
                 if (responseJson.estado) {
 
+
                     tablaData.row(filaSeleccionada).data(responseJson.objeto).draw(false);
                     filaSeleccionada = null;
                     $("#modalData").modal("hide")
@@ -152,7 +153,9 @@ $("#tbdata tbody").on("click", ".btn-Eliminar", function () {
         fila = $(this).closest("tr");
     }
 
+
     const data = tablaData.row(fila).data();
+
 
     swal({
         title: "¿está seguro?",

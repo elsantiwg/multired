@@ -63,7 +63,9 @@ namespace Multired.BLL.Implementacion
             }
         }
 
+
         public async Task<Producto> Editar(Producto entidad, Stream imagen = null, string NombreImagen = "")
+
         {
             Producto producto_existe = await _repositorio.Obtener(p => p.CodigoBarra == entidad.CodigoBarra && p.IdProducto != entidad.IdProducto);
             if (producto_existe != null)
@@ -86,6 +88,7 @@ namespace Multired.BLL.Implementacion
                 if (producto_para_editar.NombreImagen == "") {
                     producto_para_editar.NombreImagen = NombreImagen;
                 }
+
 
                 if (imagen != null)
                 {
