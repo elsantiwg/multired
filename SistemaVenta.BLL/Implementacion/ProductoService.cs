@@ -123,7 +123,7 @@ namespace Multired.BLL.Implementacion
 
                 string nombreImagen = producto_encontrado.NombreImagen;
 
-                bool respuesta = await _repositorio.Eliminar(producto_encontrado);
+                bool respuesta = await _repositorio.eliminar(producto_encontrado);
 
                 if (respuesta)
                     await _firebaseServicio.EliminarStorage("carpeta_producto", nombreImagen);

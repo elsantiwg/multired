@@ -156,7 +156,7 @@ namespace Multired.BLL.Implementacion
                     throw new TaskCanceledException("El usuario no existe");
                 }
                 string nombreFoto = usuario_encontrado.NombreFoto;
-                bool respuesta = await _repositorio.Eliminar(usuario_encontrado);
+                bool respuesta = await _repositorio.eliminar(usuario_encontrado);
 
                 if (respuesta)
                 {

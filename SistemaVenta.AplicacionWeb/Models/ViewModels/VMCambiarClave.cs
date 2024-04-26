@@ -1,6 +1,6 @@
 ﻿namespace Multired.AplicacionWeb.Models.ViewModels
 {
-    public class MVCambiarClave
+    public class VMCambiarClave
     {
         public string? claveActual {  get; set; }
         public string? claveNueva { get; set; }

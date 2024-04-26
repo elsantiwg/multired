@@ -63,7 +63,7 @@ namespace Multired.DAL.Implementacion
 
         }
 
-        public async Task<bool> Eliminar(TEntity entidad)
+        public async Task<bool> eliminar(TEntity entidad)
         {
             try
             {

@@ -68,7 +68,7 @@ namespace Multired.BLL.Implementacion
                 if (categoria_encontrada == null)
                     throw new TaskCanceledException("La categoria no existe");
 
-                bool respuesta = await _repositorio.Eliminar(categoria_encontrada);
+                bool respuesta = await _repositorio.eliminar(categoria_encontrada);
 
                 return respuesta;
             }
