@@ -11,7 +11,7 @@ using System.Linq.Expressions;
 
 namespace Multired.DAL.Implementacion
 {
-    public class GenericRepository<TEntity> : IGerenericRepository<TEntity> where TEntity : class
+    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         private readonly DBVENTAContext _dbContext;
 

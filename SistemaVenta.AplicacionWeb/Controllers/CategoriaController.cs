@@ -6,9 +6,11 @@ using Multired.AplicacionWeb.Models.ViewModels;
 using Multired.AplicacionWeb.Utilidades.Response;
 using Multired.BLL.Interfaces;
 using SistemaVenta.Entity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Multired.AplicacionWeb.Controllers
 {
+    [Authorize]
     public class CategoriaController : Controller
     {
 

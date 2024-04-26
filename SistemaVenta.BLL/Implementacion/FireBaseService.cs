@@ -15,10 +15,10 @@ namespace Multired.BLL.Implementacion
 {
     public class FireBaseService : IFireBaseService
     {
-        private readonly IGerenericRepository<Configuracion> _repositorio;
+        private readonly IGenericRepository<Configuracion> _repositorio;
 
         //constructor
-        public FireBaseService(IGerenericRepository<Configuracion> repositorio)
+        public FireBaseService(IGenericRepository<Configuracion> repositorio)
         {
             _repositorio = repositorio;
         }

@@ -5,6 +5,7 @@ using Multired.BLL.Interfaces;
 
 namespace Multired.AplicacionWeb.Controllers
 {
+  
     public class PlantillaController : Controller
     {
         private readonly IMapper _mapper;

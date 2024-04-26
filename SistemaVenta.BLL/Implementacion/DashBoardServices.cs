@@ -15,12 +15,12 @@ namespace Multired.BLL.Implementacion
     public class DashBoardServices : IDashBoardService
     {
         private readonly IVentaRepository _repositorioVenta;
-        private readonly IGerenericRepository<DetalleVenta> _repositorioDetalleVenta;
-        private readonly IGerenericRepository<Categoria> _repositorioCategoria;
-        private readonly IGerenericRepository<Producto> _repositorioProducto;
+        private readonly IGenericRepository<DetalleVenta> _repositorioDetalleVenta;
+        private readonly IGenericRepository<Categoria> _repositorioCategoria;
+        private readonly IGenericRepository<Producto> _repositorioProducto;
         private DateTime FechaInicio = DateTime.Now;
 
-        public DashBoardServices(IVentaRepository repositorioVenta, IGerenericRepository<DetalleVenta> repositorioDetalleVenta, IGerenericRepository<Categoria> repositorioCategoria, IGerenericRepository<Producto> repositorioProducto)
+        public DashBoardServices(IVentaRepository repositorioVenta, IGenericRepository<DetalleVenta> repositorioDetalleVenta, IGenericRepository<Categoria> repositorioCategoria, IGenericRepository<Producto> repositorioProducto)
         {
             _repositorioVenta = repositorioVenta;
             _repositorioDetalleVenta = repositorioDetalleVenta;

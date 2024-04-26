@@ -12,10 +12,10 @@ namespace Multired.BLL.Implementacion
 {
     public class NegocioService : INegocioService
     {
-        private readonly IGerenericRepository<Negocio> _repositorio;
+        private readonly IGenericRepository<Negocio> _repositorio;
         private readonly IFireBaseService _firebaseService;
 
-        public NegocioService(IGerenericRepository<Negocio> repositorio, IFireBaseService firebaseService)
+        public NegocioService(IGenericRepository<Negocio> repositorio, IFireBaseService firebaseService)
         {
               _repositorio = repositorio;
             _firebaseService = firebaseService;

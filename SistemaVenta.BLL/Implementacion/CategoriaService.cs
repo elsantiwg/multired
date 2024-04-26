@@ -12,9 +12,9 @@ namespace Multired.BLL.Implementacion
     public class CategoriaService : ICategoriaService
     {
 
-        private readonly IGerenericRepository<Categoria> _repositorio;
+        private readonly IGenericRepository<Categoria> _repositorio;
 
-        public CategoriaService(IGerenericRepository<Categoria> repositorio)
+        public CategoriaService(IGenericRepository<Categoria> repositorio)
         {
             _repositorio = repositorio;
         }

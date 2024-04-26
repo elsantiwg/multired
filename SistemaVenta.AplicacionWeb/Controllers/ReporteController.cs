@@ -3,10 +3,11 @@
 using AutoMapper;
 using Multired.AplicacionWeb.Models.ViewModels;
 using Multired.BLL.Interfaces;
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace Multired.AplicacionWeb.Controllers
 {
+    [Authorize]
     public class ReporteController : Controller
     {
 

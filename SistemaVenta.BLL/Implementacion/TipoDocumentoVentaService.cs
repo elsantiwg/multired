@@ -12,9 +12,9 @@ namespace Multired.BLL.Implementacion
 {
     public class TipoDocumentoVentaService : ITipoDocumentoVentaService
     {
-        private readonly IGerenericRepository<TipoDocumentoVenta> _repositorio;
+        private readonly IGenericRepository<TipoDocumentoVenta> _repositorio;
 
-        public TipoDocumentoVentaService(IGerenericRepository<TipoDocumentoVenta> repositorio)
+        public TipoDocumentoVentaService(IGenericRepository<TipoDocumentoVenta> repositorio)
         {
          _repositorio = repositorio;
         }
