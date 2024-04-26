@@ -7,6 +7,12 @@ using Multired.BLL.Interfaces;
 using Multired.DAL.Interfaces;
 using System.Diagnostics.Eventing.Reader;
 
+using Multired.AplicacionWeb.Models.ViewModels;
+using Multired.AplicacionWeb.Utilidades.Response;
+using Multired.BLL.Interfaces;
+using Multired.DAL.Interfaces;
+using System.Diagnostics.Eventing.Reader;
+
 namespace Multired.AplicacionWeb.Controllers
 {
     [Authorize]
