@@ -19,6 +19,7 @@ namespace Multired.DAL.Implementacion
         {
             _dbContext = dbContext;
         }
+
         public async Task<TEntity> Obtener(Expression<Func<TEntity, bool>> filtro)
         {
             try
@@ -32,7 +33,6 @@ namespace Multired.DAL.Implementacion
             }
         }
 
-
         public async Task<TEntity> Crear(TEntity entidad)
         {
             try
@@ -45,10 +45,9 @@ namespace Multired.DAL.Implementacion
             {
                 throw;
             }
-
         }
 
-            public async Task<bool> Editar(TEntity entidad)
+        public async Task<bool> Editar(TEntity entidad)
         {
             try
             {
@@ -60,10 +59,9 @@ namespace Multired.DAL.Implementacion
             {
                 throw;
             }
-
         }
 
-        public async Task<bool> eliminar(TEntity entidad)
+        public async Task<bool> Eliminar(TEntity entidad)
         {
             try
             {
@@ -75,12 +73,14 @@ namespace Multired.DAL.Implementacion
             {
                 throw;
             }
-
         }
         public async Task<IQueryable<TEntity>> Consultar(Expression<Func<TEntity, bool>> filtro = null)
-            {
+        {
             IQueryable<TEntity> queryEntidad = filtro == null ? _dbContext.Set<TEntity>() : _dbContext.Set<TEntity>().Where(filtro);
             return queryEntidad;
         }
+
+
+
     }
 }

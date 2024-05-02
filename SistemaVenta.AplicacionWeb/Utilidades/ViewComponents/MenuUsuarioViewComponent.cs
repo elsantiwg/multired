@@ -3,19 +3,22 @@ using System.Security.Claims;
 
 namespace Multired.AplicacionWeb.Utilidades.ViewComponents
 {
-    public class MenuUsuarioViewComponent: ViewComponent
+    public class MenuUsuarioViewComponent : ViewComponent
     {
 
-        public async Task<IViewComponentResult> invokeAsync() { 
-        
+
+        public async Task<IViewComponentResult> InvokeAsync()
+        {
+
             ClaimsPrincipal claimUser = HttpContext.User;
 
             string nombreUsuario = "";
             string urlFotoUsuario = "";
 
-            if (claimUser.Identity.IsAuthenticated) {
+            if (claimUser.Identity.IsAuthenticated)
+            {
                 nombreUsuario = claimUser.Claims
-                    .Where(c => c.Type == ClaimTypes.Name),
+                    .Where(c => c.Type == ClaimTypes.Name)
                     .Select(c => c.Value).SingleOrDefault();
 
                 urlFotoUsuario = ((ClaimsIdentity)claimUser.Identity).FindFirst("UrlFoto").Value;
@@ -25,6 +28,8 @@ namespace Multired.AplicacionWeb.Utilidades.ViewComponents
             ViewData["urlFotoUsuario"] = urlFotoUsuario;
 
             return View();
+
+
         }
     }
 }

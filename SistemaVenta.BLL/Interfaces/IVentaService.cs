@@ -17,3 +17,4 @@ namespace Multired.BLL.Interfaces
         Task<List<DetalleVenta>> Reporte(string fechaInicio, string fechaFin);
     }
 }
+

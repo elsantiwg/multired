@@ -2,6 +2,7 @@
 @{
     Layout = null;
 }
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -48,24 +49,23 @@
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user" asp-for="Correo" placeholder="Ingrese su correo">
                                         </div>
-                                        
+
                                         @if (ViewData["Mensaje"] != null)
                                         {
-                                                <div class="form-group">
-                                                    <div class="alert alert-success" role="alert">
+                                            <div class="form-group">
+                                                <div class="alert alert-success" role="alert">
                                                     @ViewData["Mensaje"]
-                                                    </div>
                                                 </div>
+                                            </div>
                                         }
                                         @if (ViewData["MensajeError"] != null)
                                         {
-                                                <div class="form-group">
-                                                    <div class="alert alert-danger" role="alert">
+                                            <div class="form-group">
+                                                <div class="alert alert-danger" role="alert">
                                                     @ViewData["MensajeError"]
-                                                    </div>
                                                 </div>
+                                            </div>
                                         }
-                                        
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Reestablecer Contraseña
                                         </button>

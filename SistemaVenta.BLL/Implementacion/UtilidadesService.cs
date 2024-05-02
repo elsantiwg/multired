@@ -17,11 +17,12 @@ namespace Multired.BLL.Implementacion
             string clave = Guid.NewGuid().ToString("N").Substring(0, 6);
             return clave;
         }
-        public string ConvertirSha512(string texto)
+        public string ConvertirSha256(string texto)
         {
+
             StringBuilder sb = new StringBuilder();
 
-            using (SHA512 hash = SHA512Managed.Create())
+            using (SHA256 hash = SHA256Managed.Create())
             {
                 Encoding enc = Encoding.UTF8;
 
@@ -31,9 +32,13 @@ namespace Multired.BLL.Implementacion
                 {
                     sb.Append(b.ToString("x2"));
                 }
+
             }
 
             return sb.ToString();
+
         }
+
+
     }
 }

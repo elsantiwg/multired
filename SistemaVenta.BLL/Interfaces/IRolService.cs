@@ -9,7 +9,6 @@ namespace Multired.BLL.Interfaces
 {
     public interface IRolService
     {
-
         Task<List<Rol>> Lista();
     }
 }

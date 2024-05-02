@@ -17,24 +17,28 @@ namespace Multired.BLL.Implementacion
 
         public NegocioService(IGenericRepository<Negocio> repositorio, IFireBaseService firebaseService)
         {
-              _repositorio = repositorio;
+            _repositorio = repositorio;
             _firebaseService = firebaseService;
         }
+
         public async Task<Negocio> Obtener()
         {
             try
             {
                 Negocio negocio_encontrado = await _repositorio.Obtener(n => n.IdNegocio == 1);
-            return negocio_encontrado;
+                return negocio_encontrado;
             }
-            catch {
+            catch
+            {
                 throw;
             }
         }
-        public async Task<Negocio> GuardarCambios(Negocio entidad, Stream logo = null, string NombreLogo = "")
+        public async Task<Negocio> GuardarCambios(Negocio entidad, Stream Logo = null, string NombreLogo = "")
         {
-            try {
+            try
+            {
                 Negocio negocio_encontrado = await _repositorio.Obtener(n => n.IdNegocio == 1);
+
 
                 negocio_encontrado.NumeroDocumento = entidad.NumeroDocumento;
                 negocio_encontrado.Nombre = entidad.Nombre;
@@ -46,18 +50,22 @@ namespace Multired.BLL.Implementacion
 
                 negocio_encontrado.NombreLogo = negocio_encontrado.NombreLogo == "" ? NombreLogo : negocio_encontrado.NombreLogo;
 
-                if (logo != null) {
-                    string urlLogo = await _firebaseService.SubirStorage(logo, "carpeta_logo", negocio_encontrado.NombreLogo);
+                if (Logo != null)
+                {
+                    string urlLogo = await _firebaseService.SubirStorage(Logo, "carpeta_logo", negocio_encontrado.NombreLogo);
                     negocio_encontrado.UrlLogo = urlLogo;
+
                 }
 
                 await _repositorio.Editar(negocio_encontrado);
                 return negocio_encontrado;
-            }catch {
+            }
+            catch
+            {
                 throw;
             }
-        }
 
+        }
 
     }
 }
