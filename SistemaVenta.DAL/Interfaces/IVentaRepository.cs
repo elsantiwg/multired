@@ -8,7 +8,7 @@ using SistemaVenta.Entity;
 
 namespace Multired.DAL.Interfaces
 {
-    public interface IVentaRepository : IGenericRepository<Venta>
+    public interface IVentaRepository : IGerenericRepository<Venta>
     {
         Task<Venta> Registrar(Venta entidad);
         Task<List<DetalleVenta>> Reporte(DateTime FechaInicio, DateTime FechaFin);
