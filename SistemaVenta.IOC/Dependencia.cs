@@ -13,41 +13,24 @@ using Multired.DAL.Implementacion;
 using Multired.BLL.Interfaces;
 using Multired.BLL.Implementacion;
 
-namespace Multired.IOC
+namespace SistemaVenta.IOC
 {
     public static class Dependencia
     {
 
-        public static void InyectarDependencia(this IServiceCollection services, IConfiguration Configuration)
-        {
+        public static void InyectarDependencia(this IServiceCollection services, IConfiguration Configuration) {
 
             services.AddDbContext<DBVENTAContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("CadenaSQL"));
             });
 
-            services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            services.AddScoped<IVentaRepository, VentaRepository>();
+            services.AddTransient(typeof(IGerenericRepository<>), typeof(GenericRepository<>));
 
+            services.AddScoped<IVentaRepository, VentaRepository>();
 
             services.AddScoped<ICorreoService, CorreoService>();
             services.AddScoped<IFireBaseService, FireBaseService>();
-
-
-            services.AddScoped<IUtilidadesService, UtilidadesService>();
-            services.AddScoped<IRolService, RolService>();
-
-            services.AddScoped<IUsuarioService, UsuarioService>();
-            services.AddScoped<INegocioService, NegocioService>();
-            services.AddScoped<ICategoriaService, CategoriaService>();
-            services.AddScoped<IProductoService, ProductoService>();
-
-            services.AddScoped<ITipoDocumentoVentaService, TipoDocumentoVentaService>();
-            services.AddScoped<IVentaService, VentaService>();
-
-
-            services.AddScoped<IDashBoardService, DashBoardService>();
-            services.AddScoped<IMenuService, MenuService>();
 
         }
     }
