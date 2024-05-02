@@ -11,7 +11,7 @@ namespace Multired.AplicacionWeb.Utilidades.Extensiones
         }
         protected override IntPtr LoadUnmanagedDll(string unmanagedDllName)
         {
-            return LoadUnmanagedDllFromPath(unmanagedDllName); 
+            return LoadUnmanagedDllFromPath(unmanagedDllName);
         }
         protected override Assembly Load(AssemblyName assemblyName)
         {
@@ -19,3 +19,4 @@ namespace Multired.AplicacionWeb.Utilidades.Extensiones
         }
     }
 }
+

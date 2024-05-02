@@ -17,25 +17,21 @@ namespace Multired.BLL.Implementacion
     {
         private readonly IGenericRepository<Configuracion> _repositorio;
 
-        //constructor
         public CorreoService(IGenericRepository<Configuracion> repositorio)
         {
             _repositorio = repositorio;
         }
 
-   
         public async Task<bool> EnviarCorreo(string CorreoDestino, string Asunto, string Mensaje)
         {
             try
             {
                 IQueryable<Configuracion> query = await _repositorio.Consultar(c => c.Recurso.Equals("Servicio_Correo"));
 
-                //para hacer el llamado de la propiedad y el valor de la configuracion en la base de datos
-                Dictionary<String, string> Config = query.ToDictionary(keySelector: c => c.Propiedad, elementSelector: c => c.Valor);
+                Dictionary<string, string> Config = query.ToDictionary(keySelector: c => c.Propiedad, elementSelector: c => c.Valor);
 
                 var credenciales = new NetworkCredential(Config["correo"], Config["clave"]);
 
-                //correo
                 var correo = new MailMessage()
                 {
                     From = new MailAddress(Config["correo"], Config["alias"]),
@@ -46,7 +42,6 @@ namespace Multired.BLL.Implementacion
 
                 correo.To.Add(new MailAddress(CorreoDestino));
 
-                //servidor
                 var clienteServidor = new SmtpClient()
                 {
                     Host = Config["host"],
@@ -56,10 +51,12 @@ namespace Multired.BLL.Implementacion
                     UseDefaultCredentials = false,
                     EnableSsl = true
                 };
-                //enviar el correo que se configuro
+
                 clienteServidor.Send(correo);
                 return true;
-            } catch { 
+            }
+            catch
+            {
                 return false;
             }
         }

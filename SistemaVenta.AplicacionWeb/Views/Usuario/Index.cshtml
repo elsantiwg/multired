@@ -2,17 +2,15 @@
     ViewData["Title"] = "Usuario";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@section Estilos {
+
+@section Estilos{
     <!-- ============================================================
     =ESTILOS PARA ESTA PAGINA
     ===============================================================-->
     <link rel="stylesheet" href="~/vendor/datatables/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="~/vendor/datatables/extensiones/css/responsive.dataTables.min.css">
     <link rel="stylesheet" href="~/vendor/datatables/extensiones/css/buttons.dataTables.min.css">
-
 }
-
-
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3 bg-second-primary">
@@ -113,8 +111,8 @@
     </div>
 </div>
 
+@section Scripts{
 
-@section Scripts {
     <!-- ============================================================
     =SCRIPTS PARA ESTA PAGINA
     ===============================================================-->
@@ -130,5 +128,9 @@
 
     <script src="~/js/vistas/Usuario_Index.js"></script>
 
-}
+    <!-- SOLO ES DE EJEMPLO - IGNORAR -->
+    @*    <script src="~/js/vistas/datatables-demo.js"></script>*@
 
+
+
+       }

@@ -16,8 +16,9 @@ namespace Multired.BLL.Implementacion
 
         public TipoDocumentoVentaService(IGenericRepository<TipoDocumentoVenta> repositorio)
         {
-         _repositorio = repositorio;
+            _repositorio = repositorio;
         }
+
         public async Task<List<TipoDocumentoVenta>> Lista()
         {
             IQueryable<TipoDocumentoVenta> query = await _repositorio.Consultar();

@@ -14,5 +14,6 @@ namespace Multired.BLL.Interfaces
         Task<int> TotalCategorias();
         Task<Dictionary<string, int>> VentasUltimaSemana();
         Task<Dictionary<string, int>> ProductosTopUltimaSemana();
+
     }
 }

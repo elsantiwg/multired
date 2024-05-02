@@ -1,4 +1,4 @@
-﻿using SistemaVenta.Entity;
+﻿
 
 namespace Multired.AplicacionWeb.Models.ViewModels
 {
@@ -8,6 +8,8 @@ namespace Multired.AplicacionWeb.Models.ViewModels
         public string? Icono { get; set; }
         public string? Controlador { get; set; }
         public string? PaginaAccion { get; set; }
+
         public virtual ICollection<VMMenu> SubMenus { get; set; }
+
     }
 }

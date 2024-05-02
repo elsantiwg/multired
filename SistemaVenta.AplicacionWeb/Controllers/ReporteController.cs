@@ -19,6 +19,7 @@ namespace Multired.AplicacionWeb.Controllers
             _mapper = mapper;
             _ventaServicio = ventaServicio;
         }
+
         public IActionResult Index()
         {
             return View();
@@ -30,5 +31,6 @@ namespace Multired.AplicacionWeb.Controllers
             List<VMReporteVenta> vmLista = _mapper.Map<List<VMReporteVenta>>(await _ventaServicio.Reporte(fechaInicio, fechaFin));
             return StatusCode(StatusCodes.Status200OK, new { data = vmLista });
         }
+
     }
 }

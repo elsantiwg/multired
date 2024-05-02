@@ -1,6 +1,4 @@
-﻿using SistemaVenta.Entity;
-
-namespace Multired.AplicacionWeb.Models.ViewModels
+﻿namespace Multired.AplicacionWeb.Models.ViewModels
 {
     public class VMUsuario
     {
@@ -12,6 +10,7 @@ namespace Multired.AplicacionWeb.Models.ViewModels
         public string? NombreRol { get; set; }
         public string? UrlFoto { get; set; }
         public int? EsActivo { get; set; }
+
     }
 }
 

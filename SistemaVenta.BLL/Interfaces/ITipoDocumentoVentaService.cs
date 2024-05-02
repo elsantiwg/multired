@@ -10,6 +10,7 @@ namespace Multired.BLL.Interfaces
 {
     public interface ITipoDocumentoVentaService
     {
+
         Task<List<TipoDocumentoVenta>> Lista();
     }
 }
