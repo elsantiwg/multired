@@ -38,15 +38,16 @@
 
             <!-- divisor -->
             <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
+            @await Component.InvokeAsync("Menu")
+           @* <!-- Nav Item - Dashboard -->
             <li class="nav-item">
                 <a class="nav-link" href="@Url.Action("Index","DashBoard")">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
-
+            
+            
             <!-- Nav Item - Administración Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAdministracion">
@@ -60,7 +61,8 @@
                     </div>
                 </div>
             </li>
-
+            *@
+            @*
             <!-- Nav Item - Inventario Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInventario">
@@ -74,7 +76,8 @@
                     </div>
                 </div>
             </li>
-
+            *@
+            @*
             <!-- Nav Item - Venta Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseVenta">
@@ -88,7 +91,8 @@
                     </div>
                 </div>
             </li>
-
+            *@
+            @*
             <!-- Nav Item - Reportes Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReportes">
@@ -101,7 +105,7 @@
                     </div>
                 </div>
             </li>
-
+            *@
             <!-- Divisor -->
             <hr class="sidebar-divider">
             <!-- Sidebar Toggler (Sidebar) -->

@@ -32,10 +32,4 @@
     <ProjectReference Include="..\SistemaVenta.IOC\Multired.IOC.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Update="Utilidades\LibreriaPDF\libwkhtmltox.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>
