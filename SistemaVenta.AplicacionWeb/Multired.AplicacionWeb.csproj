@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\Usuario\Index.cshtml" />
     <None Include="wwwroot\js\vistas\Usuario_Index.js" />
   </ItemGroup>
 
