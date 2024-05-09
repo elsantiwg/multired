@@ -4,15 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using Multired.AplicacionWeb.Models.ViewModels;
 using Multired.AplicacionWeb.Utilidades.Response;
 using Multired.BLL.Interfaces;
-using Multired.DAL.Interfaces;
-using System.Diagnostics.Eventing.Reader;
-
-using Multired.AplicacionWeb.Models.ViewModels;
-using Multired.AplicacionWeb.Utilidades.Response;
-using Multired.BLL.Interfaces;
-using Multired.DAL.Interfaces;
-using System.Diagnostics.Eventing.Reader;
-using Multired.AplicacionWeb.Utilidades.CustomFilter;
 
 namespace Multired.AplicacionWeb.Controllers
 {
@@ -26,8 +17,6 @@ namespace Multired.AplicacionWeb.Controllers
         {
             _dashboardServicio = dashboardServicio;
         }
-
-        [ClaimRequirement(controlador:"DashBoard", accion:"Index" )]
         public IActionResult Index()
         {
             return View();

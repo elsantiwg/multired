@@ -1,13 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 using AutoMapper;
-using Newtonsoft;
 using Multired.AplicacionWeb.Models.ViewModels;
 using Multired.AplicacionWeb.Utilidades.Response;
 using Multired.BLL.Interfaces;
 using SistemaVenta.Entity;
 using Microsoft.AspNetCore.Authorization;
-using Multired.AplicacionWeb.Utilidades.CustomFilter;
 
 namespace Multired.AplicacionWeb.Controllers
 {
@@ -21,9 +19,6 @@ namespace Multired.AplicacionWeb.Controllers
             _mapper = mapper;
             _categoriaServicio = categoriaServicio;
         }
-
-        [ClaimRequirement(controlador: "Categoria", accion: "Index")]
-
 
         public IActionResult Index()
         {
