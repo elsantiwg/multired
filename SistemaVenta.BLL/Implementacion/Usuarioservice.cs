@@ -53,7 +53,7 @@ namespace Multired.BLL.Implementacion
             {
 
                 string clave_generada = _utilidadesService.GenerarClave();
-                entidad.Clave = _utilidadesService.ConvertirSha512(clave_generada);
+                entidad.Clave = _utilidadesService.ConvertirArgon2(clave_generada);
                 entidad.NombreFoto = NombreFoto;
 
                 if (Foto != null)
@@ -188,7 +188,7 @@ namespace Multired.BLL.Implementacion
         public async Task<Usuario> ObtenerPorCredenciales(string correo, string clave)
         {
 
-            string clave_encriptada = _utilidadesService.ConvertirSha512(clave);
+            string clave_encriptada = _utilidadesService.ConvertirArgon2(clave);
 
             Usuario usuario_encontrado = await _repositorio.Obtener(u => u.Correo.Equals(correo)
             && u.Clave.Equals(clave_encriptada));
@@ -243,10 +243,10 @@ namespace Multired.BLL.Implementacion
                 if (usuario_encontrado == null)
                     throw new TaskCanceledException("El usuario no existe");
 
-                if (usuario_encontrado.Clave != _utilidadesService.ConvertirSha512(ClaveActual))
+                if (usuario_encontrado.Clave != _utilidadesService.ConvertirArgon2(ClaveActual))
                     throw new TaskCanceledException("La contraseña ingresada como actual no es correcta");
 
-                usuario_encontrado.Clave = _utilidadesService.ConvertirSha512(ClaveNueva);
+                usuario_encontrado.Clave = _utilidadesService.ConvertirArgon2(ClaveNueva);
 
                 bool respuesta = await _repositorio.Editar(usuario_encontrado);
 
@@ -271,7 +271,7 @@ namespace Multired.BLL.Implementacion
 
 
                 string clave_generada = _utilidadesService.GenerarClave();
-                usuario_encontrado.Clave = _utilidadesService.ConvertirSha512(clave_generada);
+                usuario_encontrado.Clave = _utilidadesService.ConvertirArgon2(clave_generada);
 
 
                 UrlPlantillaCorreo = UrlPlantillaCorreo.Replace("[clave]", clave_generada);

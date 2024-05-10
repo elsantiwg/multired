@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 using AutoMapper;
-
+using Multired.AplicacionWeb.Models.ViewModels;
 using Multired.AplicacionWeb.Utilidades.Response;
 using Multired.BLL.Interfaces;
 using SistemaVenta.Entity;
@@ -11,8 +11,6 @@ using DinkToPdf.Contracts;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using SistemaVenta.AplicacionWeb.Models.ViewModels;
-using Multired.AplicacionWeb.Models.ViewModels;
-using Multired.AplicacionWeb.Utilidades.CustomFilter;
 
 namespace Multired.AplicacionWeb.Controllers
 {
@@ -35,12 +33,12 @@ namespace Multired.AplicacionWeb.Controllers
             _mapper = mapper;
             _converter = converter;
         }
-        [ClaimRequirement(controlador: "Venta", accion: "NuevaVenta")]
+
         public IActionResult NuevaVenta()
         {
             return View();
         }
-        [ClaimRequirement(controlador: "Venta", accion: "HistorialVenta")]
+
         public IActionResult HistorialVenta()
         {
             return View();

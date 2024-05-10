@@ -12,34 +12,34 @@
 
     if (menu.SubMenus.Count == 0)
     {
-        <li class="nav-item">
-            <a class="nav-link" href="@($"/{menu.Controlador}/{menu.PaginaAccion}")">
-                <i class="@menu.Icono"></i>
-                <span>@menu.Descripcion</span>
-            </a>
-        </li>
+<li class="nav-item">
+    <a class="nav-link" href="@($"/{menu.Controlador}/{menu.PaginaAccion}")">
+        <i class="@menu.Icono"></i>
+        <span>@menu.Descripcion</span>
+    </a>
+</li>
     }
     else
     {
 
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="@($"#{menucollapse}{correlativo}")">
-                <i class="@menu.Icono"></i>
-                <span>@menu.Descripcion</span>
-            </a>
+<li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="@($"#{menucollapse}{correlativo}")">
+        <i class="@menu.Icono"></i>
+        <span>@menu.Descripcion</span>
+    </a>
 
-            <div id="@($"{menucollapse}{correlativo}")" class="collapse" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    @foreach (var submenu in menu.SubMenus)
-                    {
-                        <a class="collapse-item" href="@($"/{submenu.Controlador}/{submenu.PaginaAccion}")">
-                            @submenu.Descripcion
-                        </a>
-                    }
-                </div>
-            </div>
+    <div id="@($"{menucollapse}{correlativo}")" class="collapse" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            @foreach (var submenu in menu.SubMenus)
+            {
+                <a class="collapse-item" href="@($"/{submenu.Controlador}/{submenu.PaginaAccion}")">
+                    @submenu.Descripcion
+                </a>
+            }
+        </div>
+    </div>
 
-        </li>
+</li>
         correlativo = correlativo + 1;
     }
 }

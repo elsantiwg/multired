@@ -11,6 +11,5 @@ namespace Multired.BLL.Interfaces
     public interface IMenuService
     {
         Task<List<Menu>> ObtenerMenus(int idUsuario);
-        Task<bool> TienePermisoMenu(int idUsuario, string controlador,string accion);
     }
 }
