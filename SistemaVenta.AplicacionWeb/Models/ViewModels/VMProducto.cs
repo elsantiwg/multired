@@ -5,7 +5,7 @@ namespace Multired.AplicacionWeb.Models.ViewModels
     public class VMProducto
     {
         public int IdProducto { get; set; }
-        public string? CodigoBarra { get; set; }
+        public string? Fabricante { get; set; }
         public string? Marca { get; set; }
         public string? Descripcion { get; set; }
         public int? IdCategoria { get; set; }

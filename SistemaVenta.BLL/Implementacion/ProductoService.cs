@@ -35,7 +35,7 @@ namespace Multired.BLL.Implementacion
 
         public async Task<Producto> Crear(Producto entidad, Stream imagen = null, string NombreImagen = "")
         {
-            Producto producto_existe = await _repositorio.Obtener(p => p.CodigoBarra == entidad.CodigoBarra);
+            Producto producto_existe = await _repositorio.Obtener(p => p.Fabricante == entidad.Fabricante);
 
             if (producto_existe != null)
                 throw new TaskCanceledException("El codigo de barra ya existe");
@@ -72,7 +72,7 @@ namespace Multired.BLL.Implementacion
         public async Task<Producto> Editar(Producto entidad, Stream imagen = null, string NombreImagen = "")
 
         {
-            Producto producto_existe = await _repositorio.Obtener(p => p.CodigoBarra == entidad.CodigoBarra && p.IdProducto != entidad.IdProducto);
+            Producto producto_existe = await _repositorio.Obtener(p => p.Fabricante == entidad.Fabricante && p.IdProducto != entidad.IdProducto);
 
             if (producto_existe != null)
                 throw new TaskCanceledException("El codigo de barra ya existe");
@@ -83,7 +83,7 @@ namespace Multired.BLL.Implementacion
 
                 Producto producto_para_editar = queryProducto.First();
 
-                producto_para_editar.CodigoBarra = entidad.CodigoBarra;
+                producto_para_editar.Fabricante = entidad.Fabricante;
                 producto_para_editar.Marca = entidad.Marca;
                 producto_para_editar.Descripcion = entidad.Descripcion;
                 producto_para_editar.IdCategoria = entidad.IdCategoria;

@@ -32,6 +32,11 @@ namespace SistemaVenta.DAL.DBContext
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("CadenaSQL", options =>
+                options.MigrationsAssembly("Multired.DAL"));
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -252,10 +257,10 @@ namespace SistemaVenta.DAL.DBContext
 
                 entity.Property(e => e.IdProducto).HasColumnName("idProducto");
 
-                entity.Property(e => e.CodigoBarra)
+                entity.Property(e => e.Fabricante)
                     .HasMaxLength(50)
                     .IsUnicode(false)
-                    .HasColumnName("codigoBarra");
+                    .HasColumnName("Fabricante");
 
                 entity.Property(e => e.Descripcion)
                     .HasMaxLength(100)

@@ -11,6 +11,7 @@ namespace Multired.BLL.Implementacion
 {
     public class UtilidadesService : IUtilidadesService
     {
+
         public string GenerarClave()
         {
             string clave = Guid.NewGuid().ToString("N").Substring(0, 6);

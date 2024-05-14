@@ -32,7 +32,7 @@ $(document).ready(function () {
                 console.log(d)
 
                 $("#inputGroupSubTotal").text(`Sub total - ${d.simboloMoneda}`)
-                $("#inputGroupIGV").text(`IGV(${d.porcentajeImpuesto}%) - ${d.simboloMoneda}`)
+                $("#inputGroupIGV").text(`IVA(${d.porcentajeImpuesto}%) - ${d.simboloMoneda}`)
                 $("#inputGroupTotal").text(`Total - ${d.simboloMoneda}`)
 
                 ValorImpuesto = parseFloat(d.porcentajeImpuesto)

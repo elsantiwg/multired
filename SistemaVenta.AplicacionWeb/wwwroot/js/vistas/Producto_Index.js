@@ -2,7 +2,7 @@
 
 const MODELO_BASE = {
     idProducto: 0,
-    codigoBarra: "",
+    fabricante: "",
     marca: "",
     nombre: "",
     idCategoria: 0,
@@ -49,7 +49,7 @@ $(document).ready(function () {
                     return `<img style="height:60px" src=${data} class="rounded mx-auto d-block"/>`
                 }
             },
-            { "data": "codigoBarra" },
+            { "data": "fabricante" },
             { "data": "marca" },
             { "data": "descripcion" },
             { "data": "nombreCategoria" },
@@ -95,7 +95,7 @@ $(document).ready(function () {
 function mostrarModal(modelo = MODELO_BASE) {
     $("#txtId").val(modelo.idProducto)
 
-    $("#txtCodigoBarra").val(modelo.codigoBarra)
+    $("#txtFabricante").val(modelo.fabricante)
     $("#txtMarca").val(modelo.marca)
     $("#txtDescripcion").val(modelo.descripcion)
     $("#cboCategoria").val(modelo.idCategoria == 0 ? $("#cboCategoria option:first").val() : modelo.idCategoria)
@@ -132,7 +132,7 @@ $("#btnGuardar").click(function () {
 
     const modelo = structuredClone(MODELO_BASE);
     modelo["idProducto"] = parseInt($("#txtId").val())
-    modelo["codigoBarra"] = $("#txtCodigoBarra").val()
+    modelo["fabricante"] = $("#txtFabricante").val()
     modelo["marca"] = $("#txtMarca").val()
     modelo["descripcion"] = $("#txtDescripcion").val()
     modelo["idCategoria"] = $("#cboCategoria").val()

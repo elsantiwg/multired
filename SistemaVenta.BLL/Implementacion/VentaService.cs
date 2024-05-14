@@ -30,7 +30,7 @@ namespace Multired.BLL.Implementacion
             IQueryable<Producto> query = await _repositorioProducto.Consultar(p =>
                 p.EsActivo == true &&
                 p.Stock > 0 &&
-                string.Concat(p.CodigoBarra, p.Marca, p.Descripcion).Contains(busqueda)
+                string.Concat(p.Fabricante, p.Marca, p.Descripcion).Contains(busqueda)
                 );
 
             return query.Include(c => c.IdCategoriaNavigation).ToList();
