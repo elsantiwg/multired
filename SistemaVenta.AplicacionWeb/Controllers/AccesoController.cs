@@ -71,7 +71,7 @@ namespace Multired.AplicacionWeb.Controllers
                 properties
                 );
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("NuevaVenta", "Venta");
         }
 
         [HttpPost]
