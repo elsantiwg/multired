@@ -1,4 +1,6 @@
-﻿namespace Multired.AplicacionWeb.Models.ViewModels
+﻿using SistemaVenta.AplicacionWeb.Models.ViewModels;
+
+namespace Multired.AplicacionWeb.Models.ViewModels
 {
     public class VMPDFVenta
     {

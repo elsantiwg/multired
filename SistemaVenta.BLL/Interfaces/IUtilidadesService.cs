@@ -11,7 +11,6 @@ namespace Multired.BLL.Interfaces
 
         string GenerarClave();
 
-        string ConvertirSha512(string texto);
-
+        string ConvertirArgon2(string texto);
     }
 }

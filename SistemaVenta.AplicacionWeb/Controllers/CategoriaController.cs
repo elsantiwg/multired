@@ -1,25 +1,25 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
 using AutoMapper;
-using Newtonsoft;
 using Multired.AplicacionWeb.Models.ViewModels;
 using Multired.AplicacionWeb.Utilidades.Response;
 using Multired.BLL.Interfaces;
 using SistemaVenta.Entity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Multired.AplicacionWeb.Controllers
 {
+    [Authorize]
     public class CategoriaController : Controller
     {
-
         private readonly IMapper _mapper;
         private readonly ICategoriaService _categoriaServicio;
-
         public CategoriaController(IMapper mapper, ICategoriaService categoriaServicio)
         {
             _mapper = mapper;
             _categoriaServicio = categoriaServicio;
         }
+
         public IActionResult Index()
         {
             return View();
@@ -28,12 +28,14 @@ namespace Multired.AplicacionWeb.Controllers
         [HttpGet]
         public async Task<IActionResult> Lista()
         {
+
             List<VMCategoria> vmCategoriaLista = _mapper.Map<List<VMCategoria>>(await _categoriaServicio.Lista());
             return StatusCode(StatusCodes.Status200OK, new { data = vmCategoriaLista });
+
         }
 
         [HttpPost]
-        public async Task<IActionResult> Crear([FromBody]VMCategoria modelo)
+        public async Task<IActionResult> Crear([FromBody] VMCategoria modelo)
         {
             GenericResponse<VMCategoria> gResponse = new GenericResponse<VMCategoria>();
 
@@ -45,7 +47,7 @@ namespace Multired.AplicacionWeb.Controllers
                 gResponse.Estado = true;
                 gResponse.Objeto = modelo;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 gResponse.Estado = false;
                 gResponse.Mensaje = ex.Message;
@@ -79,19 +81,20 @@ namespace Multired.AplicacionWeb.Controllers
         [HttpDelete]
         public async Task<IActionResult> Eliminar(int IdCategoria)
         {
-            GenericResponse<string> gResponse = new GenericResponse<string>();
 
+            GenericResponse<string> gResponse = new GenericResponse<string>();
             try
             {
                 gResponse.Estado = await _categoriaServicio.Eliminar(IdCategoria);
+
             }
             catch (Exception ex)
             {
                 gResponse.Estado = false;
                 gResponse.Mensaje = ex.Message;
             }
-
             return StatusCode(StatusCodes.Status200OK, gResponse);
         }
+
     }
 }

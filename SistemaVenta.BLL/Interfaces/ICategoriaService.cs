@@ -14,7 +14,7 @@ namespace Multired.BLL.Interfaces
         Task<List<Categoria>> Lista();
         Task<Categoria> Crear(Categoria entidad);
         Task<Categoria> Editar(Categoria entidad);
-        Task<bool> Eliminar(int idCategoria);  
+        Task<bool> Eliminar(int idCategoria);
 
     }
 }

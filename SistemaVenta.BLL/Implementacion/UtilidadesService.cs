@@ -1,11 +1,11 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Multired.BLL.Interfaces;
-using System.Security.Cryptography;
+using Isopoh.Cryptography.Argon2;
 
 namespace Multired.BLL.Implementacion
 {
@@ -17,23 +17,27 @@ namespace Multired.BLL.Implementacion
             string clave = Guid.NewGuid().ToString("N").Substring(0, 6);
             return clave;
         }
-        public string ConvertirSha512(string texto)
+
+        public string ConvertirArgon2(string texto)
         {
-            StringBuilder sb = new StringBuilder();
-
-            using (SHA512 hash = SHA512Managed.Create())
+            // Configura los parámetros de Argon2
+            var config = new Argon2Config
             {
-                Encoding enc = Encoding.UTF8;
+                Type = Argon2Type.DataIndependentAddressing,
+                Version = Argon2Version.Nineteen,
+                TimeCost = 2,
+                MemoryCost = 65536,
+                Lanes = 4,
+                Password = Encoding.UTF8.GetBytes(texto),
+                Salt = new byte[8] // Deberías generar una nueva sal para cada contraseña
+            };
 
-                byte[] result = hash.ComputeHash(enc.GetBytes(texto));
-
-                foreach (byte b in result)
-                {
-                    sb.Append(b.ToString("x2"));
-                }
+            // Crea y calcula el hash Argon2
+            using (var argon2 = new Argon2(config))
+            {
+                var hash = argon2.Hash();
+                return Convert.ToBase64String(hash.Buffer);
             }
-
-            return sb.ToString();
         }
     }
 }

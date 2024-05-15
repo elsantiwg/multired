@@ -12,7 +12,8 @@ namespace Multired.BLL.Interfaces
     {
         Task<List<Producto>> Lista();
         Task<Producto> Crear(Producto entidad, Stream imagen = null, string NombreImagen = "");
-        Task<Producto> Editar(Producto entidad, Stream imagen = null);
+        Task<Producto> Editar(Producto entidad, Stream imagen = null, string NombreImagen = "");
         Task<bool> Eliminar(int idProducto);
+
     }
 }

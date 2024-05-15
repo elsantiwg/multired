@@ -11,13 +11,13 @@ namespace Multired.BLL.Implementacion
 {
     public class CategoriaService : ICategoriaService
     {
+        private readonly IGenericRepository<Categoria> _repositorio;
 
-        private readonly IGerenericRepository<Categoria> _repositorio;
-
-        public CategoriaService(IGerenericRepository<Categoria> repositorio)
+        public CategoriaService(IGenericRepository<Categoria> repositorio)
         {
             _repositorio = repositorio;
         }
+
         public async Task<List<Categoria>> Lista()
         {
             IQueryable<Categoria> query = await _repositorio.Consultar();
@@ -46,6 +46,7 @@ namespace Multired.BLL.Implementacion
                 Categoria categoria_encontrada = await _repositorio.Obtener(c => c.IdCategoria == entidad.IdCategoria);
                 categoria_encontrada.Descripcion = entidad.Descripcion;
                 categoria_encontrada.EsActivo = entidad.EsActivo;
+
                 bool respuesta = await _repositorio.Editar(categoria_encontrada);
 
                 if (!respuesta)
@@ -68,7 +69,7 @@ namespace Multired.BLL.Implementacion
                 if (categoria_encontrada == null)
                     throw new TaskCanceledException("La categoria no existe");
 
-                bool respuesta = await _repositorio.eliminar(categoria_encontrada);
+                bool respuesta = await _repositorio.Eliminar(categoria_encontrada);
 
                 return respuesta;
             }
@@ -77,6 +78,7 @@ namespace Multired.BLL.Implementacion
                 throw;
             }
         }
+
 
     }
 }

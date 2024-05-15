@@ -1,16 +1,23 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Nueva Venta";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @section Estilos{
+
     <!-- ============================================================
     =ESTILOS PARA ESTA PAGINA
     ===============================================================-->
     <link href="~/vendor/select2/select2.min.css" rel="stylesheet">
 
+    <style>
+        .select2 {
+            width: 100% !important;
+        }
+    </style>
 }
+
+
 <div class="row">
     <div class="col-sm-8">
         <div class="row">
@@ -83,8 +90,6 @@
                                 <label class="input-group-text" for="cboTipoDocumentoVenta">Tipo</label>
                             </div>
                             <select class="custom-select" id="cboTipoDocumentoVenta">
-                                <option value="1">Boleta</option>
-                                <option value="2">Factura</option>
                             </select>
                         </div>
                         <div class="input-group input-group-sm mb-3">
@@ -95,7 +100,7 @@
                         </div>
                         <div class="input-group input-group-sm mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroupIGV">IGV(18%)</span>
+                                <span class="input-group-text" id="inputGroupIGV">IVA</span>
                             </div>
                             <input type="text" class="form-control text-right" aria-label="Small" aria-describedby="inputGroupIGV" id="txtIGV" disabled>
                         </div>
@@ -116,7 +121,7 @@
                 <div class="card shadow">
                     <div class="card-body">
                         <div class="form-group mb-0">
-                            <button class="btn btn-success btn-sm btn-block" id="btnTerminarVentar">Terminar Venta</button>
+                            <button class="btn btn-success btn-sm btn-block" id="btnTerminarVenta">Terminar Venta</button>
                         </div>
                     </div>
                 </div>
@@ -124,7 +129,6 @@
         </div>
     </div>
 </div>
-     </div>
 
 @section Scripts{
     <!-- ============================================================
@@ -132,8 +136,8 @@
     ===============================================================-->
     <script src="~/vendor/select2/select2.min.js"></script>
     <script src="~/vendor/select2/es.min.js"></script>
-}
 
+    <script src="~/js/vistas/Nueva_Venta.js"></script>
 
-
-           
+                    }
+                    

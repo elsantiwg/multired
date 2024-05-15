@@ -1,9 +1,9 @@
 ﻿const MODELO_BASE = {
-
     idCategoria: 0,
     descripcion: "",
     esActivo: 1,
 }
+
 
 let tablaData;
 
@@ -53,7 +53,9 @@ $(document).ready(function () {
             url: "https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
         },
     });
+
 })
+
 
 function mostrarModal(modelo = MODELO_BASE) {
     $("#txtId").val(modelo.idCategoria)
@@ -61,7 +63,6 @@ function mostrarModal(modelo = MODELO_BASE) {
     $("#cboEstado").val(modelo.esActivo)
 
     $("#modalData").modal("show")
-
 }
 
 $("#btnNuevo").click(function () {
@@ -71,17 +72,18 @@ $("#btnNuevo").click(function () {
 
 $("#btnGuardar").click(function () {
 
+
     if ($("#txtDescripcion").val().trim() == "") {
-        toastr.warning("", "Debe completar el campo : descripcion")
+        toastr.warning("", "Debe completa el campo : descripcion")
         $("#txtDescripcion").focus()
         return;
     }
+
 
     const modelo = structuredClone(MODELO_BASE);
     modelo["idCategoria"] = parseInt($("#txtId").val())
     modelo["descripcion"] = $("#txtDescripcion").val()
     modelo["esActivo"] = $("#cboEstado").val()
-
 
     $("#modalData").find("div.modal-content").LoadingOverlay("show");
 
@@ -97,13 +99,14 @@ $("#btnGuardar").click(function () {
                 return response.ok ? response.json() : Promise.reject(response);
             })
             .then(responseJson => {
+
                 if (responseJson.estado) {
 
                     tablaData.row.add(responseJson.objeto).draw(false)
                     $("#modalData").modal("hide")
                     swal("Listo!", "La categoria fue creada", "success")
                 } else {
-                    swal("Lo sentimos", responseJson.mensaje, "error")
+                    swal("Los sentimos", responseJson.mensaje, "error")
                 }
             })
     } else {
@@ -117,21 +120,27 @@ $("#btnGuardar").click(function () {
                 return response.ok ? response.json() : Promise.reject(response);
             })
             .then(responseJson => {
+
                 if (responseJson.estado) {
 
-                    tablaData.row.filaSeleccionada.data(responseJson.objeto).draw(false);
+                    tablaData.row(filaSeleccionada).data(responseJson.objeto).draw(false);
                     filaSeleccionada = null;
                     $("#modalData").modal("hide")
-                    swal("Listo!", "La categoria fue modificada ", "success")
+                    swal("Listo!", "La categoria fue modificada", "success")
                 } else {
-                    swal("Lo sentimos", responseJson.mensaje, "error")
+                    swal("Los sentimos", responseJson.mensaje, "error")
                 }
             })
+
     }
+
+
 })
+
 
 let filaSeleccionada;
 $("#tbdata tbody").on("click", ".btn-editar", function () {
+
     if ($(this).closest("tr").hasClass("child")) {
         filaSeleccionada = $(this).closest("tr").prev();
     } else {
@@ -141,7 +150,10 @@ $("#tbdata tbody").on("click", ".btn-editar", function () {
     const data = tablaData.row(filaSeleccionada).data();
 
     mostrarModal(data);
+
 })
+
+
 
 $("#tbdata tbody").on("click", ".btn-eliminar", function () {
 
@@ -152,38 +164,41 @@ $("#tbdata tbody").on("click", ".btn-eliminar", function () {
         fila = $(this).closest("tr");
     }
 
-    const data = tablaData.row(filaSeleccionada).data();
+    const data = tablaData.row(fila).data();
 
     swal({
-        title: "¿está seguro?",
-        text: `Eliminar a la categoria "${data.descripcion}"`,
+        title: "¿Está seguro?",
+        text: `Eliminar la categoria "${data.descripcion}"`,
         type: "warning",
         showCancelButton: true,
         confirmButtonClass: "btn-danger",
-        confirmButtonText: "si, eliminar",
-        cancelButtonText: "no, cancelar",
+        confirmButtonText: "Si, eliminar",
+        cancelButtonText: "No, cancelar",
         closeOnConfirm: false,
         closeOnCancel: true
     },
         function (respuesta) {
+
             if (respuesta) {
+
                 $(".showSweetAlert").LoadingOverlay("show");
 
-                fetch(`/Categoria/Eliminar?idCategoria=${data.idCategoria}`, {
-                    method: "DELETE",
+                fetch(`/Categoria/Eliminar?IdCategoria=${data.idCategoria}`, {
+                    method: "DELETE"
                 })
                     .then(response => {
                         $(".showSweetAlert").LoadingOverlay("hide");
                         return response.ok ? response.json() : Promise.reject(response);
                     })
                     .then(responseJson => {
+
                         if (responseJson.estado) {
 
                             tablaData.row(fila).remove().draw()
 
-                            swal("Listo!", "La categoria fue eliminado ", "success")
+                            swal("Listo!", "La categoria fue eliminada", "success")
                         } else {
-                            swal("Lo sentimos", responseJson.mensaje, "error")
+                            swal("Los sentimos", responseJson.mensaje, "error")
                         }
                     })
             }

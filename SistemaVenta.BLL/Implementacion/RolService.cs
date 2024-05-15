@@ -12,19 +12,20 @@ namespace Multired.BLL.Implementacion
 {
     public class RolService : IRolService
     {
+        private readonly IGenericRepository<Rol> _repositorio;
 
-        private readonly IGerenericRepository<Rol> _repositorio;
-
-        public RolService(IGerenericRepository<Rol> repositorio)
+        public RolService(IGenericRepository<Rol> repositorio)
         {
             _repositorio = repositorio;
         }
+
         public async Task<List<Rol>> Lista()
         {
-            
+
             IQueryable<Rol> query = await _repositorio.Consultar();
 
             return query.ToList();
+
         }
     }
 }

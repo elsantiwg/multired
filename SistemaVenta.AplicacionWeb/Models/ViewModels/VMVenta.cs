@@ -1,6 +1,6 @@
-﻿using SistemaVenta.Entity;
+﻿using Multired.AplicacionWeb.Models.ViewModels;
 
-namespace Multired.AplicacionWeb.Models.ViewModels
+namespace SistemaVenta.AplicacionWeb.Models.ViewModels
 {
     public class VMVenta
     {
@@ -16,7 +16,8 @@ namespace Multired.AplicacionWeb.Models.ViewModels
         public string? ImpuestoTotal { get; set; }
         public string? Total { get; set; }
         public string? FechaRegistro { get; set; }
-
         public virtual ICollection<VMDetalleVenta> DetalleVenta { get; set; }
     }
 }
+
+
