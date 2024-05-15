@@ -25,7 +25,7 @@ namespace Multired.AplicacionWeb.Controllers
 
             if (claimUser.Identity.IsAuthenticated)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("NuevaVenta", "Venta");
             }
             return View();
         }
