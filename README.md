@@ -18,11 +18,15 @@ Estructura del Proyecto
 
 BLL/: Capa de lógica de negocio (Business Logic Layer).
 Contiene los servicios y lógica de aplicación.
+
 DAL/: Capa de acceso a datos (Data Access Layer).
 Contiene los repositorios y contexto de base de datos.
+
 Entity/: Entidades del dominio y modelos de datos.
 IOC/: Configuración de Inversión de Control (Inversion of Control).
+
 Configuración de servicios y dependencias.
+
 Controllers/: Controladores que manejan las solicitudes HTTP y la lógica de negocio.
 Views/: Vistas HTML que renderizan la interfaz de usuario utilizando Razor syntax.
 wwwroot/: Archivos estáticos como CSS, JavaScript y archivos para exportación de documentos.
