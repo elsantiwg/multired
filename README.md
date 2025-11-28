@@ -1,6 +1,6 @@
 # Proyecto Multired: Sistema Avanzado de Inventario
 
-Este repositorio contiene un proyecto completo en .NET Core MVC que implementa el sistema de inventario avanzado "Multired". El sistema ofrece funcionalidades robustas para la gestión de inventarios, usuarios con diferentes niveles de permisos, integración con bases de datos relacionales, funciones de ventas, búsqueda avanzada, generación de reportes en PDF y Excel, dashboard interactivo con gráficas, y más. Utiliza múltiples tecnologías modernas para asegurar un desarrollo eficiente y escalable.
+Este repositorio contiene un proyecto completo en .NET Core MVC que implementa el sistema de inventario avanzado "Multired". El sistema ofrece funcionalidades robustas para la gestión de inventarios, usuarios con diferentes niveles de permisos, integración con bases de datos relacionales, funciones de ventas, búsqueda avanzada, generación de reportes en PDF y Excel, dashboard interactivo con gráficas, y más. Utiliza múltiples tecnologías modernas para asegurar un desarrollo eficiente y escalable
 
 ## Características Principales
 
